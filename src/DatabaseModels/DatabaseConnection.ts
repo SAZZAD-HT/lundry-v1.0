@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import{TypeOrmModule} from '@nestjs/typeorm';
 import { UserTable } from './Entity/UserTable';
+import { UserType } from './Entity/UserType';
 
 
 @Module({
@@ -15,7 +16,7 @@ import { UserTable } from './Entity/UserTable';
         //entities: [Mosque,User,UserBookings,BookingMosque,Announcemententity],
         autoLoadEntities: true,
         synchronize: true,
-	}),TypeOrmModule.forFeature([UserTable])
+	}),TypeOrmModule.forFeature([UserTable,UserType])
 	],
   providers: [],
   controllers: []
